@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>iSolve Request Classification</title>
+	<link rel="stylesheet" href="{{ url_for('static',
+		filename='style.css') }}">
+</head>
+
+<body>
+	<div><h1>iSolve Request Classification</h1></div>
+	{% from "_formhelpers.html" import render_field %}
+	<div><strong>Enter your Request Description</strong></div>
+	<form method=post action="/prediction">
+		<dl>
+			{{ render_field(form.sayhello) }}
+		</dl>
+		<input type=submit value='Submit Request' name='submit_btn'>
+	</form>
+</body>
+
+</html>
